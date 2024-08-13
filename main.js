@@ -1,19 +1,3 @@
-const menuBtn = document.getElementById("menu-btn");
-const navLinks = document.getElementById("nav-links");
-const menuBtnIcon = menuBtn.querySelector("i");
-
-menuBtn.addEventListener("click", (e) => {
-  navLinks.classList.toggle("open");
-
-  const isOpen = navLinks.classList.contains("open");
-  menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
-});
-
-navLinks.addEventListener("click", (e) => {
-  navLinks.classList.remove("open");
-  menuBtnIcon.setAttribute("class", "ri-menu-line");
-});
-
 const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
@@ -71,39 +55,6 @@ ScrollReveal().reveal(".price__card", {
   interval: 500,
 });
 
-// var swiper = new Swiper(".swiper", {
-//   slidesPerView: "auto",
-//   spaceBetween: 30,
-//   loop: true,
-// navigation: {
-//   nextEl: ".swiper-button-next",
-//   prevEl: ".swiper-button-prev",
-// },
-// })
-
-// const swiper = new Swiper(".swiper-slide", {
-//   loop: true,
-//   // slidesPerView: "auto",
-//   // spaceBetween: 20,
-// });
-
-// const swiper = new Swiper('.swiper-wrappe', {
-
-//   loop: true,
-
-
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-
-// });
 
 
 /////////// firebase///////////////
@@ -167,4 +118,4 @@ const app = initializeApp(firebaseConfig);
    .catch((error)=>{
        console.error('Error Signing out:', error);
    })
- })
+ });
